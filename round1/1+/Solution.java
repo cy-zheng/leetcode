@@ -1,7 +1,7 @@
 /*
-    ºÃ¾Ã²»Ë¢ÓĞĞ©ÊÖÉú
-    Êı×éÃ»ÅÅĞò£¬ĞèÒª×Ô¼º¼ÇÂ¼ÏÂ±ê
-    javaÊ¹ÓÃArrays.sort·½·¨ĞèÒªÔªËØÊµÏÖComparable½Ó¿ÚµÄpublic int compareTo(Pair other)·½·¨
+    å¥½ä¹…ä¸åˆ·æœ‰äº›æ‰‹ç”Ÿ
+    æ•°ç»„æ²¡æ’åºï¼Œéœ€è¦è‡ªå·±è®°å½•ä¸‹æ ‡
+    javaä½¿ç”¨Arrays.sortæ–¹æ³•éœ€è¦å…ƒç´ å®ç°Comparableæ¥å£çš„public int compareTo(Pair other)æ–¹æ³•
 */
 
 import java.util.Arrays;

@@ -1,6 +1,6 @@
 /*
-    ºÍÔ½½çÃÜÇÐÏà¹ØµÄÌâÄ¿£¬ÄÚ²¿±äÁ¿¶¼ÓÃlong
-    Math.pow()·µ»Ødouble£¬»áÓÐ¾«¶ÈËðÊ§
+    å’Œè¶Šç•Œå¯†åˆ‡ç›¸å…³çš„é¢˜ç›®ï¼Œå†…éƒ¨å˜é‡éƒ½ç”¨long
+    Math.pow()è¿”å›ždoubleï¼Œä¼šæœ‰ç²¾åº¦æŸå¤±
 */
 
 public class Solution {
