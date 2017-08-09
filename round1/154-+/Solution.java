@@ -1,3 +1,7 @@
+/*
+    遇到重复元素的时候，只能O(n)判断。
+*/
+
 public class Solution {
     public int findMin(int[] nums) {
         int left = 0, right = nums.length - 1, mid;
@@ -12,7 +16,7 @@ public class Solution {
                 else if(nums[left] > nums[mid])
                     right = mid;
                 else{
-                    if (smallerInLeft(nums, mid))
+                    if (smallerInLeft(nums, left, mid))
                         right = mid;
                     else
                         left = mid;
@@ -21,12 +25,12 @@ public class Solution {
         }
         if (nums[left] < nums[right])
             return nums[left];
-        return nums[right];
+        return nums[right]; 
     }
-
-    private boolean smallerInLeft(int[] nums, int index) {
+    
+    private boolean smallerInLeft(int[] nums, int leftBound, int index) {
         int left = index - 1;
-        while (left >= 0) {
+        while (left >= leftBound) {
             if (nums[left] < nums[index])
                 return true;
             left--;
