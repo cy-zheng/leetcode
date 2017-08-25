@@ -21,7 +21,7 @@ class Solution {
                 if (curr.equals(endWord))
                     return level;
                 for (int j = 0; j < curr.length(); j++) {
-                    for (int k = 0; k < 25; k++) {
+                    for (int k = 0; k < 26; k++) {
                         StringBuilder sb = new StringBuilder(curr);
                         String tmp = sb.replace(j, j + 1, Character.toString((char) ('a' + k))).toString();
                         if (set.contains(tmp) && !used.contains(tmp)) {
