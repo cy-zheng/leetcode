@@ -14,7 +14,6 @@ class Solution {
         dfs(result, nums, new ArrayList<Integer>(), 0);
         return result;
     }
-
     
     private void dfs(List<List<Integer>> result, int[] nums, List<Integer> path, int start) {
         if (path.size() >= 2) {
