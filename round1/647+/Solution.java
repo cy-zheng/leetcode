@@ -1,0 +1,26 @@
+/*
+    双序列dp
+*/
+
+class Solution {
+    public int countSubstrings(String s) {
+        int result = s.length();
+        boolean[][] dp = new boolean[s.length()][s.length()];
+        for (int i = 0; i < s.length(); i++)
+            dp[i][i] = true;
+        
+        for (int i = s.length() - 1; i >= 0; i--) {
+            for (int j = i + 1; j < s.length(); j++) {
+                if (i + 1 == j && s.charAt(i) == s.charAt(j)) {
+                    result += 1;
+                    dp[i][j] = true;
+                }
+                else if (i + 1 < j && s.charAt(i) == s.charAt(j) && dp[i + 1][j - 1]) {
+                    result += 1;
+                    dp[i][j] = true;
+                }
+            }
+        }
+        return result;
+    }
+}
