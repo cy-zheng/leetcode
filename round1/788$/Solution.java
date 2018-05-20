@@ -1,0 +1,35 @@
+/*
+    题目定义：X is a good number if after rotating each digit individually by 180 degrees, we get a valid number that is different from X.
+    注意是旋转每一位，不是旋转整个
+    所以如果只包括0，1，8是不行的，因为旋转后是他本身。
+    包括3，4，7是不行的，因为旋转后不是有效数字。
+*/
+
+class Solution {
+    public int rotatedDigits(int N) {
+        int count = 0;
+        for (int i = 1; i <= N; i ++) {
+            if (isValid(i)) count ++;
+        }
+        return count;
+    }
+    
+    public boolean isValid(int N) {
+        /*
+            Valid if N contains AT LEAST ONE 2, 5, 6, 9
+            AND NO 3, 4 or 7s
+        */
+        boolean validFound = false;
+        while (N > 0) {
+            if (N % 10 == 2) validFound = true;
+            if (N % 10 == 5) validFound = true;
+            if (N % 10 == 6) validFound = true;
+            if (N % 10 == 9) validFound = true;
+            if (N % 10 == 3) return false;
+            if (N % 10 == 4) return false;
+            if (N % 10 == 7) return false;
+            N = N / 10;
+        }
+        return validFound;
+    }
+}
